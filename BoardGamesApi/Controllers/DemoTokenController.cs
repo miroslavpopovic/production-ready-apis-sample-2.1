@@ -18,10 +18,13 @@ namespace BoardGamesApi.Controllers
         // i.e. use ASP.NET Identity with manual token generation or try IdentityServer
         [AllowAnonymous]
         [Route("/get-token")]
-        public IActionResult GenerateToken(string name = "aspnetcore-api-demo", bool admin = false)
+        public IActionResult GenerateToken(
+            string name = "aspnetcore-api-demo", bool admin = false)
         {
-            var jwt = JwtTokenGenerator
-                .Generate(name, admin, _configuration["Tokens:Issuer"], _configuration["Tokens:Key"]);
+            var jwt = JwtTokenGenerator.Generate(
+                name, admin,
+                _configuration["Tokens:Issuer"],
+                _configuration["Tokens:Key"]);
 
             return Ok(jwt);
         }

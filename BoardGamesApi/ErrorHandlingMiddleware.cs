@@ -14,7 +14,8 @@ namespace BoardGamesApi
         private readonly RequestDelegate _next;
         private readonly ILogger<ErrorHandlingMiddleware> _logger;
 
-        public ErrorHandlingMiddleware(RequestDelegate next, ILogger<ErrorHandlingMiddleware> logger)
+        public ErrorHandlingMiddleware(
+            RequestDelegate next, ILogger<ErrorHandlingMiddleware> logger)
         {
             _next = next;
             _logger = logger;
@@ -55,7 +56,10 @@ namespace BoardGamesApi
 
             var result = JsonConvert.SerializeObject(
                 problem,
-                new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+                new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                });
 
             context.Response.ContentType = "application/problem+json";
             context.Response.StatusCode = (int)code;

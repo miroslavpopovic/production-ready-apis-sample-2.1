@@ -14,7 +14,8 @@ namespace BoardGamesApi.Controllers
         private readonly IGamesRepository _gamesRepository;
         private readonly ILogger<GamesController> _logger;
 
-        public GamesController(IGamesRepository gamesRepository, ILogger<GamesController> logger)
+        public GamesController(
+            IGamesRepository gamesRepository, ILogger<GamesController> logger)
         {
             _gamesRepository = gamesRepository;
             _logger = logger;
@@ -75,7 +76,8 @@ namespace BoardGamesApi.Controllers
 
             _gamesRepository.Create(game);
 
-            return CreatedAtAction(nameof(GamesController.GetById), "games", new { id = game.Id }, game);
+            return CreatedAtAction(
+                nameof(GamesController.GetById), "games", new { id = game.Id }, game);
         }
 
         [Authorize(Roles = "admin")]

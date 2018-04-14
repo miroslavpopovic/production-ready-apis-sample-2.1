@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using BoardGamesApi.Models;
 using Newtonsoft.Json;
@@ -60,8 +59,9 @@ namespace BoardGamesApi.Data
         {
             if (_games == null)
             {
-                var assembly = Assembly.GetEntryAssembly();
-                var resourceStream = assembly.GetManifestResourceStream("BoardGamesApi.Data.games.json");
+                var assembly = typeof(GamesRepository).Assembly;
+                var resourceStream = assembly
+                    .GetManifestResourceStream("BoardGamesApi.Data.games.json");
 
                 using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
                 using (var jsonReader = new JsonTextReader(reader))
