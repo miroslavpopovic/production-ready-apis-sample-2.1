@@ -10,16 +10,16 @@ namespace BoardGamesApi.Controllers
     /// Games endpoint of Board Games API.
     /// </summary>
     [ApiController]
-    [ApiVersion("1", Deprecated = true)]
+    [ApiVersion("2")]
     [Authorize]
     [Route("api/games")]
-    public class GamesController : Controller
+    public class GamesV2Controller : Controller
     {
         private readonly IGamesRepository _gamesRepository;
-        private readonly ILogger<GamesController> _logger;
+        private readonly ILogger<GamesV2Controller> _logger;
 
-        public GamesController(
-            IGamesRepository gamesRepository, ILogger<GamesController> logger)
+        public GamesV2Controller(
+            IGamesRepository gamesRepository, ILogger<GamesV2Controller> logger)
         {
             _gamesRepository = gamesRepository;
             _logger = logger;
@@ -107,7 +107,7 @@ namespace BoardGamesApi.Controllers
             _gamesRepository.Create(game);
 
             return CreatedAtAction(
-                nameof(GamesController.GetById), "games", new { id = game.Id }, game);
+                nameof(GamesV2Controller.GetById), "games", new { id = game.Id }, game);
         }
 
         /// <summary>
