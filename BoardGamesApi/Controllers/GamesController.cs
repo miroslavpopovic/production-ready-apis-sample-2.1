@@ -6,6 +6,9 @@ using Microsoft.Extensions.Logging;
 
 namespace BoardGamesApi.Controllers
 {
+    /// <summary>
+    /// Games endpoint of Board Games API.
+    /// </summary>
     [ApiController]
     [Authorize]
     [Route("api/games")]
@@ -21,6 +24,12 @@ namespace BoardGamesApi.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Delete the game with the given id.
+        /// </summary>
+        /// <param name="id">Id of the game to delete.</param>
+        /// <response code="200">Game successfully deleted</response>
+        /// <response code="404">Game with the given ID not found.</response>
         [Authorize(Roles = "admin")]
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
@@ -39,6 +48,14 @@ namespace BoardGamesApi.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Get one page of games.
+        /// </summary>
+        /// <param name="page">Page number.</param>
+        /// <param name="size">Page size.</param>
+        /// <remarks>If you omit <c>page</c> and <c>size</c> query parameters, you'll get the first page with 10 games.</remarks>
+        /// <response code="200">Returns a page of games.</response>
+        /// <response code="404">Game with the given id not found.</response>
         [HttpGet]
         public ActionResult<PagedList<Game>> GetAll(int page = 1, int size = 10)
         {
@@ -49,6 +66,12 @@ namespace BoardGamesApi.Controllers
             return games;
         }
 
+        /// <summary>
+        /// Get a single game by id.
+        /// </summary>
+        /// <param name="id">Id of the game to retrieve.</param>
+        /// <response code="200">Returns the game with the given id.</response>
+        /// <response code="404">Game with the given id not found.</response>
         [HttpGet("{id}")]
         public ActionResult<Game> GetById(string id)
         {
@@ -65,6 +88,12 @@ namespace BoardGamesApi.Controllers
             return game;
         }
 
+        /// <summary>
+        /// Create a new game from the supplied data.
+        /// </summary>
+        /// <param name="model">Data to create the game from.</param>
+        /// <response code="200">Returns the created game.</response>
+        /// <response code="400">Supplied data is not valid.</response>
         [Authorize(Roles = "admin")]
         [HttpPost]
         public ActionResult<Game> Post(GameInput model)
@@ -80,6 +109,14 @@ namespace BoardGamesApi.Controllers
                 nameof(GamesController.GetById), "games", new { id = game.Id }, game);
         }
 
+        /// <summary>
+        /// Updates the game with the given id.
+        /// </summary>
+        /// <param name="id">Id of the game to update.</param>
+        /// <param name="model">Data to update the game from.</param>
+        /// <response code="200">Returns the updated game.</response>
+        /// <response code="400">Supplied data is not valid.</response>
+        /// <response code="404">Game with the given id not found.</response>
         [Authorize(Roles = "admin")]
         [HttpPut("{id}")]
         public ActionResult<Game> Put(string id, GameInput model)

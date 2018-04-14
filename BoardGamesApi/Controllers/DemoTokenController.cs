@@ -4,11 +4,12 @@ using Microsoft.Extensions.Configuration;
 
 namespace BoardGamesApi.Controllers
 {
-    public class TempController : Controller
+    [ApiExplorerSettings(IgnoreApi = true)]
+    public class DemoTokenController : Controller
     {
         private readonly IConfiguration _configuration;
 
-        public TempController(IConfiguration configuration)
+        public DemoTokenController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
@@ -17,7 +18,7 @@ namespace BoardGamesApi.Controllers
         // you will need a robust auth implementation for production
         // i.e. use ASP.NET Identity with manual token generation or try IdentityServer
         [AllowAnonymous]
-        [Route("/get-token")]
+        [HttpGet("/get-token")]
         public IActionResult GenerateToken(
             string name = "aspnetcore-api-demo", bool admin = false)
         {

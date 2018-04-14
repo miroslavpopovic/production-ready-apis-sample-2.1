@@ -24,10 +24,14 @@ namespace BoardGamesApi
             services.AddJwtBearerAuthentication(Configuration);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSwagger();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseStaticFiles();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -44,6 +48,13 @@ namespace BoardGamesApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger(); // http://localhost:49194/swagger/v1/swagger.json
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Board Games API v1");
+                c.RoutePrefix = string.Empty; // Serve as app root instead of /swagger
+            });
         }
     }
 }
