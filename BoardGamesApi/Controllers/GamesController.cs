@@ -13,6 +13,7 @@ namespace BoardGamesApi.Controllers
     [ApiVersion("1", Deprecated = true)]
     [Authorize]
     [Route("api/games")]
+    [Route("api/v{api-version:apiVersion}/games")]
     public class GamesController : Controller
     {
         private readonly IGamesRepository _gamesRepository;
