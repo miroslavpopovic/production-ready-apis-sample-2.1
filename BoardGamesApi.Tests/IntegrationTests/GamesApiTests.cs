@@ -39,7 +39,7 @@ namespace BoardGamesApi.Tests.IntegrationTests
         public async Task Delete_NoAuthorizationHeader_ReturnsUnauthorized()
         {
             _client.DefaultRequestHeaders.Clear();
-            var result = await _client.DeleteAsync("/api/games/gam-000001");
+            var result = await _client.DeleteAsync("/api/v2/games/gam-000001");
 
             Assert.Equal(HttpStatusCode.Unauthorized, result.StatusCode);
         }
@@ -51,21 +51,21 @@ namespace BoardGamesApi.Tests.IntegrationTests
             _client.DefaultRequestHeaders
                 .Add("Authorization", new[] { $"Bearer {_nonAdminToken}" });
 
-            var result = await _client.DeleteAsync("/api/games/gam-000001");
+            var result = await _client.DeleteAsync("/api/v2/games/gam-000001");
 
             Assert.Equal(HttpStatusCode.Forbidden, result.StatusCode);
         }
 
         [Fact]
-        public async Task Delete_NoId_ReturnsNotFound()
+        public async Task Delete_NoId_ReturnsMethodNotAllowed()
         {
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders
                 .Add("Authorization", new[] { $"Bearer {_adminToken}" });
 
-            var result = await _client.DeleteAsync("/api/games");
+            var result = await _client.DeleteAsync("/api/v2/games");
 
-            Assert.Equal(HttpStatusCode.NotFound, result.StatusCode);
+            Assert.Equal(HttpStatusCode.MethodNotAllowed, result.StatusCode);
         }
 
         [Fact]
@@ -75,7 +75,7 @@ namespace BoardGamesApi.Tests.IntegrationTests
             _client.DefaultRequestHeaders
                 .Add("Authorization", new[] { $"Bearer {_adminToken}" });
 
-            var result = await _client.DeleteAsync("/api/games/non-existing");
+            var result = await _client.DeleteAsync("/api/v2/games/non-existing");
 
             Assert.Equal(HttpStatusCode.NotFound, result.StatusCode);
         }
@@ -87,7 +87,7 @@ namespace BoardGamesApi.Tests.IntegrationTests
             _client.DefaultRequestHeaders
                 .Add("Authorization", new[] { $"Bearer {_adminToken}" });
 
-            var result = await _client.DeleteAsync("/api/games/gam-000001");
+            var result = await _client.DeleteAsync("/api/v2/games/gam-000001");
 
             Assert.Equal(HttpStatusCode.OK, result.StatusCode);
         }
