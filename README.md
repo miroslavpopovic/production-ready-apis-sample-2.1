@@ -11,3 +11,4 @@ To follow up the presentation, switch through the various numbered git branches.
 ## Download
 
 - [Postman collection](board-games-api-postman-collection.json) for testing the API
+- [WinDays 18 presentation](windays-2018-production-ready-apis.pptx)
