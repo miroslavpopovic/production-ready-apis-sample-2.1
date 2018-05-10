@@ -155,12 +155,7 @@
 					"name": "Get all games",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiMzQ1YjYwMjItZjU4ZC00ZmQxLWExNjctYzMyMjAzODc3YmUwIiwiZXhwIjoxNTI2MzI1NjQ5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0NDM5MSJ9.CVAN0LPdv7kp8CWuqDVhUUT4JLFx35wqLfSdFtltcLI"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
 							"raw": "https://localhost:44391/api/games?size=5&page=1",
@@ -191,12 +186,7 @@
 					"name": "Get game by id",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiMzQ1YjYwMjItZjU4ZC00ZmQxLWExNjctYzMyMjAzODc3YmUwIiwiZXhwIjoxNTI2MzI1NjQ5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0NDM5MSJ9.CVAN0LPdv7kp8CWuqDVhUUT4JLFx35wqLfSdFtltcLI"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
 							"raw": "https://localhost:44391/api/games/gam-000002",
@@ -222,10 +212,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiM2UxMzE2NWUtYjg1Zi00NTQ5LWE3MjMtYjJlYTc2YTE5ZTgyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJleHAiOjE1MjYzMjU4MDYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzOTEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIn0.JUUdG1zKm9O8Vl-_O2krJmcxH-kIdwO3XlBn9KrnHfA"
 							}
 						],
 						"body": {
@@ -256,10 +242,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiM2UxMzE2NWUtYjg1Zi00NTQ5LWE3MjMtYjJlYTc2YTE5ZTgyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJleHAiOjE1MjYzMjU4MDYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzOTEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIn0.JUUdG1zKm9O8Vl-_O2krJmcxH-kIdwO3XlBn9KrnHfA"
 							}
 						],
 						"body": {
@@ -286,12 +268,7 @@
 					"name": "Delete game",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiM2UxMzE2NWUtYjg1Zi00NTQ5LWE3MjMtYjJlYTc2YTE5ZTgyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJleHAiOjE1MjYzMjU4MDYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzOTEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIn0.JUUdG1zKm9O8Vl-_O2krJmcxH-kIdwO3XlBn9KrnHfA"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
 							"raw": "https://localhost:44391/api/games/gam-000002",
@@ -309,6 +286,38 @@
 					},
 					"response": []
 				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiYmMwOWE4ZDAtZmFkYS00MGRhLWIxMzAtNDQxYTU0ZjI1ZGJjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJleHAiOjE1Mjg1NzI0NTQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzOTEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIn0.UE3HP7XsXAtSRTiITCN2JAPE8Z7yAaRL149UjT_p6kg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "68b495c4-d2b7-491a-b8af-882a87d56869",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "03307f2c-474c-45c3-bbd2-9418a3342481",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
 			]
 		},
 		{
@@ -319,12 +328,7 @@
 					"name": "Get all games",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiMzQ1YjYwMjItZjU4ZC00ZmQxLWExNjctYzMyMjAzODc3YmUwIiwiZXhwIjoxNTI2MzI1NjQ5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0NDM5MSJ9.CVAN0LPdv7kp8CWuqDVhUUT4JLFx35wqLfSdFtltcLI"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
 							"raw": "https://localhost:44391/api/v2/games",
@@ -346,12 +350,7 @@
 					"name": "Get game by id",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiMzQ1YjYwMjItZjU4ZC00ZmQxLWExNjctYzMyMjAzODc3YmUwIiwiZXhwIjoxNTI2MzI1NjQ5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0NDM5MSJ9.CVAN0LPdv7kp8CWuqDVhUUT4JLFx35wqLfSdFtltcLI"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
 							"raw": "https://localhost:44391/api/v2/games/gam-000002",
@@ -378,10 +377,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiM2UxMzE2NWUtYjg1Zi00NTQ5LWE3MjMtYjJlYTc2YTE5ZTgyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJleHAiOjE1MjYzMjU4MDYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzOTEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIn0.JUUdG1zKm9O8Vl-_O2krJmcxH-kIdwO3XlBn9KrnHfA"
 							}
 						],
 						"body": {
@@ -412,10 +407,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiM2UxMzE2NWUtYjg1Zi00NTQ5LWE3MjMtYjJlYTc2YTE5ZTgyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJleHAiOjE1MjYzMjU4MDYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzOTEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIn0.JUUdG1zKm9O8Vl-_O2krJmcxH-kIdwO3XlBn9KrnHfA"
 							}
 						],
 						"body": {
@@ -443,12 +434,7 @@
 					"name": "Delete game",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiM2UxMzE2NWUtYjg1Zi00NTQ5LWE3MjMtYjJlYTc2YTE5ZTgyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJleHAiOjE1MjYzMjU4MDYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzOTEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIn0.JUUdG1zKm9O8Vl-_O2krJmcxH-kIdwO3XlBn9KrnHfA"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
 							"raw": "https://localhost:44391/api/v2/games/gam-000002",
@@ -466,6 +452,38 @@
 						}
 					},
 					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc3BuZXRjb3JlLWFwaS1kZW1vIiwianRpIjoiYmMwOWE4ZDAtZmFkYS00MGRhLWIxMzAtNDQxYTU0ZjI1ZGJjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJleHAiOjE1Mjg1NzI0NTQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzOTEiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzkxIn0.UE3HP7XsXAtSRTiITCN2JAPE8Z7yAaRL149UjT_p6kg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "64ad023f-35e2-4d21-aee4-f6b946c4cc1f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f0f0c137-d01c-4c26-af16-75a9d6332bba",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		}
